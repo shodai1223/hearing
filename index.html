@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>他キャリア利用者 ヒアリング資料（研修用）</title>
+<style>
+  :root{
+    --bg:#f4f5f7; --card:#fff; --ink:#1d2330; --sub:#5d6575; --line:#e3e6ec;
+    --sb:#0b72e7; --ok:#0f9d6b; --warn:#e8590c;
+    --docomo:#cc0033; --au:#eb5505; --rakuten:#bf0000; --mvno:#5b6b82;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+    font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+  .wrap{max-width:680px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 14px calc(48px + env(safe-area-inset-bottom))}
+
+  .cover{background:var(--ink);color:#fff;border-radius:16px;padding:20px 18px;margin-bottom:14px}
+  .cover .kicker{font-size:12px;opacity:.7;letter-spacing:.08em}
+  .cover h1{font-size:22px;margin:4px 0 6px;line-height:1.35}
+  .cover p{margin:0;font-size:14px;opacity:.85}
+
+  .toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 0;margin-bottom:22px}
+  .toc .t{font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.06em;padding:8px 16px 4px}
+  .toc a{display:flex;align-items:center;gap:12px;padding:11px 16px;color:var(--ink);text-decoration:none;border-top:1px solid var(--line)}
+  .toc a:first-of-type{border-top:0}
+  .toc .n{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .toc .x{flex:1;min-width:0;font-weight:700;font-size:15px;line-height:1.35}
+  .toc .x small{display:block;font-weight:500;font-size:12px;color:var(--sub)}
+  .toc .arw{color:#b8c0cc;font-size:18px}
+  .chapter{margin:30px 0 12px;display:flex;align-items:center;gap:10px}
+  .chapter .no{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800}
+  .chapter h2{margin:0;font-size:20px;line-height:1.3}
+  .chapter h2 small{display:block;font-size:12px;color:var(--sub);font-weight:500}
+
+  .lead{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:12px;font-size:14px;color:var(--sub);border:1px solid var(--line)}
+  .lead b{color:var(--ink)}
+
+  .key{background:var(--ink);color:#fff;border-radius:14px;padding:16px}
+  .key b{font-size:17px}
+  .key .q{display:flex;gap:10px;margin-top:10px}
+  .key .q div{flex:1;background:rgba(255,255,255,.12);border-radius:10px;padding:10px;font-size:15px;font-weight:700}
+  .key .q div small{display:block;font-size:12px;opacity:.75;font-weight:500}
+
+  .type{background:var(--card);border-radius:12px;padding:12px 14px;margin-top:10px;border:1px solid var(--line);border-left:5px solid var(--c,#999)}
+  .type h3{margin:0 0 4px;font-size:15px}
+  .type div{font-size:14px;color:var(--sub)}
+  .type div b{color:var(--ink)}
+
+  .card{background:var(--card);border-radius:14px;margin-bottom:14px;border:1px solid var(--line);overflow:hidden}
+  .card .head{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,color-mix(in srgb,var(--c) 10%,#fff),#fff)}
+  .card .bar{width:8px;height:32px;border-radius:4px;background:var(--c);flex:0 0 auto}
+  .card .name{font-weight:800;font-size:18px;line-height:1.25}
+  .card .name small{display:block;font-weight:500;font-size:12px;color:var(--sub)}
+  .card .body{padding:14px 16px}
+
+  .first{background:#fff6ec;border:1px solid #ffd8b0;border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:15px;font-weight:600}
+  .first small{color:var(--warn);display:block;font-size:12px;font-weight:700}
+  .label{font-size:12px;font-weight:700;color:var(--sub);margin:2px 0 4px;letter-spacing:.04em}
+  ul{margin:0 0 12px;padding:0;list-style:none}
+  li{position:relative;padding:8px 0 8px 26px;border-bottom:1px dashed var(--line);font-size:15px}
+  li:last-child{border-bottom:0}
+  li::before{content:"";position:absolute;left:3px;top:14px;width:12px;height:12px;border:2px solid #b8c0cc;border-radius:3px}
+  li small{display:block;color:var(--sub);font-size:13px}
+  li .to{color:var(--sb);font-weight:700}
+  .perk{background:#eef3ff;border:1px solid #c9d8ff;border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:14px}
+  .perk strong,.perk small{color:var(--sb);display:block;font-size:12px;font-weight:700}
+  .perk ul{margin:2px 0 6px}
+  .perk li{font-size:14px;padding:6px 0 6px 18px;border-bottom:0}
+  .perk li::before{width:6px;height:6px;border:0;background:var(--sb);border-radius:50%;top:15px;left:4px}
+  .perk li small{color:var(--sub);font-weight:400;font-size:12px;display:block}
+  .perk ul+strong,.perk ul+small{margin-top:6px}
+  .perk .tip{background:#fff;border-radius:8px;padding:7px 10px;font-weight:700;font-size:13px}
+  .aim{background:#eaf7f1;border:1px solid #bfe7d4;border-radius:10px;padding:10px 12px;font-size:14px}
+  .aim small{color:var(--ok);display:block;font-size:12px;font-weight:700}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:600px){.grid.two{grid-template-columns:1fr 1fr}}
+  .mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+  .mini h3{margin:0 0 2px;font-size:16px;display:flex;align-items:center;gap:8px}
+  .mini h3 span{background:var(--sb);color:#fff;border-radius:6px;font-size:12px;padding:1px 7px}
+  .mini p{margin:0 0 4px;font-size:12px;color:var(--sub)}
+  .mini ul{margin:0}
+
+  .note{font-size:13px;color:var(--sub);background:#fff;border-radius:12px;padding:12px 14px;border:1px solid var(--line);margin-top:24px}
+  .top{display:block;text-align:right;font-size:13px;margin-top:-4px}
+  .top a{color:var(--sub);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="cover" id="top">
+    <div class="kicker">ヒアリング研修資料</div>
+    <h1>他キャリア利用者の<br>ヒアリング項目</h1>
+    <p>提案する商材：ソフトバンク・ワイモバイル</p>
+  </div>
+
+  <nav class="toc">
+    <div class="t">目次</div>
+    <a href="#basic" data-j><span class="n">1</span><span class="x">基本の考え方<small>聞く方向はこの2つだけ</small></span><span class="arw">›</span></a>
+    <a href="#common" data-j><span class="n">2</span><span class="x">共通項目<small>全員に聞く①〜⑥</small></span><span class="arw">›</span></a>
+    <a href="#major" data-j><span class="n">3</span><span class="x">大手キャリア<small>ドコモ・au</small></span><span class="arw">›</span></a>
+    <a href="#sub" data-j><span class="n">4</span><span class="x">サブブランド<small>ahamo・irumo・UQ・povo</small></span><span class="arw">›</span></a>
+    <a href="#rakuten" data-j><span class="n">5</span><span class="x">楽天モバイル</span><span class="arw">›</span></a>
+    <a href="#mvno" data-j><span class="n">6</span><span class="x">格安SIM<small>mineo・IIJmio・日本通信 など</small></span><span class="arw">›</span></a>
+  </nav>
+
+  <!-- 1 -->
+  <div class="chapter" id="basic"><div class="no">1</div><h2>基本の考え方<small>聞く方向はこの2つだけ</small></h2></div>
+  <div class="key">
+    <b>キャリアのタイプで「聞く方向」を変える</b>
+    <div class="q">
+      <div><small>大手の人には</small>なぜ<br>変えないのか？</div>
+      <div><small>サブブランドの人には</small>なぜ<br>変えたのか？</div>
+    </div>
+  </div>
+  <div class="type" style="--c:var(--docomo)"><h3>大手（ドコモ・au）</h3>
+    <div><b>最初に：</b>何年使っているか／家族構成</div>
+    <div><b>引き出す不満：</b>料金が高い・セットで縛られている</div></div>
+  <div class="type" style="--c:var(--au)"><h3>サブブランド（ahamo・irumo・UQ・povo）</h3>
+    <div><b>最初に：</b>前のキャリアと乗り換えた理由</div>
+    <div><b>引き出す不満：</b>サポートがない・容量・速度</div></div>
+  <div class="type" style="--c:var(--rakuten)"><h3>楽天モバイル</h3>
+    <div><b>最初に：</b>楽天経済圏への依存度</div>
+    <div><b>引き出す不満：</b>つながりにくさ</div></div>
+  <div class="type" style="--c:var(--mvno)"><h3>格安SIM</h3>
+    <div><b>最初に：</b>選んだ理由</div>
+    <div><b>引き出す不満：</b>速度・サポート</div></div>
+
+  <!-- 2 -->
+  <div class="chapter" id="common"><div class="no">2</div><h2>共通項目<small>どのキャリアの人にも聞く。①から順に自然な会話で</small></h2></div>
+  <div class="grid two">
+    <div class="mini"><h3><span>①</span>今の契約</h3><p>まずは現状把握</p>
+      <ul>
+        <li>今のキャリア・プラン名<small>わからなければ「月いくらくらい？」</small></li>
+        <li>月々の支払額<small>端末代込みか、回線代だけか</small></li>
+        <li>利用年数</li>
+        <li>契約名義・支払い方法<small>本人／家族、クレカ／口座</small></li>
+      </ul></div>
+    <div class="mini"><h3><span>②</span>使い方</h3><p>最適なプラン選びの材料</p>
+      <ul>
+        <li>月のデータ使用量<small>「Wi-Fiがない所で動画見ますか？」で探る</small></li>
+        <li>通話の頻度・長さ<small>かけ放題が必要か</small></li>
+        <li>自宅Wi-Fiの有無・光回線の会社名</li>
+        <li>よく使うアプリ・サービス</li>
+      </ul></div>
+    <div class="mini"><h3><span>③</span>家族・世帯</h3><p>家族割・まとめ提案の材料</p>
+      <ul>
+        <li>同居家族の人数とそれぞれのキャリア</li>
+        <li>誰が決めているか<small>決裁者は誰か</small></li>
+        <li>子どもの初スマホ・親のスマホデビュー予定</li>
+      </ul></div>
+    <div class="mini"><h3><span>④</span>端末</h3><p>機種変更・残債の確認</p>
+      <ul>
+        <li>機種名・購入時期</li>
+        <li>分割の残債・残り回数</li>
+        <li>返却プログラムの加入状況</li>
+        <li>次の機種の希望<small>iPhone／Android、こだわり</small></li>
+      </ul></div>
+    <div class="mini"><h3><span>⑤</span>満足度・不満</h3><p>乗り換え理由をつくる</p>
+      <ul>
+        <li>料金・通信品質・サポートの満足度</li>
+        <li>不満な点<small>「もし変えるとしたら何が理由になりそう？」</small></li>
+        <li>乗り換えをためらう理由<small>面倒・メールアドレス・ポイントなど</small></li>
+      </ul></div>
+    <div class="mini"><h3><span>⑥</span>提案につなげる項目</h3><p>ソフトバンク・ワイモバイルへの切り返し</p>
+      <ul>
+        <li>光回線の種類と更新月<small class="to">→ おうち割 光セット</small></li>
+        <li>電気・ガスの会社<small class="to">→ でんきセット割</small></li>
+        <li>PayPay・Yahoo!ショッピング・LYPプレミアム<small class="to">→ 経済圏の乗り換え</small></li>
+        <li>家族のキャリアがバラバラか<small class="to">→ 家族割でまとめる</small></li>
+        <li>他社ポイントへのこだわり<small class="to">→ PayPayへの移行メリット</small></li>
+      </ul></div>
+  </div>
+  <div class="top"><a href="#top" data-j>↑ 目次へ</a></div>
+
+  <!-- 3 -->
+  <div class="chapter" id="major"><div class="no">3</div><h2>大手キャリア<small>ドコモ・au</small></h2></div>
+  <div class="lead"><b>客層：</b>長く使っている人が多い。「なんとなく変えていない」「家族全員同じ」「高いことに気づいていない」タイプ。</div>
+
+  <div class="card" style="--c:var(--docomo)">
+    <div class="head"><span class="bar"></span><span class="name">ドコモ</span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「何年くらいドコモですか？ずっと変えなかった理由は？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>月々の支払額と内訳<small>端末代込みで高くなっていないか</small></li>
+        <li>家族の何人がドコモか・誰が払っているか</li>
+        <li>dポイント・dカードの使い方<small>GOLD持ちはやめにくい</small></li>
+        <li>ドコモ光の利用・光回線の更新月</li>
+        <li>いつでもカエドキプログラムの残債・返却時期</li>
+        <li>docomoメールの利用<small>銀行・病院などに登録していないか</small></li>
+      </ul>
+      <div class="aim"><small>狙い</small>料金の不満を引き出し、家族まとめての乗り換え＋光セットへ。</div>
+    </div>
+  </div>
+
+  <div class="card" style="--c:var(--au)">
+    <div class="head"><span class="bar"></span><span class="name">au</span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「何年くらいauですか？ご家族もauですか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>セットにしているもの<small>auひかり・ケーブルテレビ・auでんき など</small></li>
+        <li>Ponta・au PAY・au PAYカードの利用状況</li>
+        <li>スマホトクするプログラムの加入・返却時期</li>
+        <li>auメールの利用</li>
+        <li>動画などのセット付きプラン<small>実際にそのサービスを見ているか</small></li>
+      </ul>
+      <div class="aim"><small>狙い</small>セットの縛りをほどく。「全部ソフトバンクに置き換えたらいくら？」を比較。</div>
+    </div>
+  </div>
+  <div class="top"><a href="#top" data-j>↑ 目次へ</a></div>
+
+  <!-- 4 -->
+  <div class="chapter" id="sub"><div class="no">4</div><h2>サブブランド・オンライン専用<small>ahamo・irumo・UQモバイル・povo</small></h2></div>
+  <div class="lead"><b>客層：</b>一度は自分で乗り換えている人。料金に敏感で比較慣れしている。<b>前のキャリアと乗り換えた理由を最優先で聞く。</b></div>
+
+  <div class="card" style="--c:var(--docomo)">
+    <div class="head"><span class="bar"></span><span class="name">ahamo<small>ドコモのオンライン専用</small></span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「ahamoの前はどこでしたか？ドコモからのプラン変更ですか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>乗り換えの理由<small>料金？データ量？</small></li>
+        <li>店舗サポートがなくて困ったことはあるか</li>
+        <li>データ量はahamoの容量で足りているか</li>
+        <li>家族はどこか<small>ahamoは家族割なし</small></li>
+        <li>dポイントへのこだわり</li>
+      </ul>
+      <div class="perk"><small>今の主な特典</small><ul><li>月2,970円で30GB＋5分以内の国内通話無料</li></ul><div class="tip">聞きどころ：30GBで足りているか、5分を超える通話がないかを聞く</div></div>
+      <div class="aim"><small>狙い</small>「安いけどサポートがない」不安を引き出し、店頭サポートのあるワイモバイルへ。</div>
+    </div>
+  </div>
+
+  <div class="card" style="--c:var(--docomo)">
+    <div class="head"><span class="bar"></span><span class="name">irumo<small>ドコモの小容量プラン</small></span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「irumoの前はどこでしたか？なぜ変えましたか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>データ容量で困っていないか<small>小容量なので足りなくなりがち</small></li>
+        <li>通信速度への不満</li>
+        <li>ドコモ光とのセット割の利用</li>
+      </ul>
+      <div class="perk"><small>今の主な特典</small><ul><li>2025年6月4日で新規受付が終了。今いるのは既存の利用者だけ</li><li>0.5GB〜9GBの小容量プラン。ドコモ光・home 5Gとのセット割あり</li></ul><div class="tip">聞きどころ：セット割があるかで実際の支払額が変わるので、必ず確認する</div></div>
+      <div class="aim"><small>狙い</small>容量と価格のバランスでワイモバイルのプランと比較。</div>
+    </div>
+  </div>
+
+  <div class="card" style="--c:var(--au)">
+    <div class="head"><span class="bar"></span><span class="name">UQモバイル<small>auのサブブランド ／ ワイモバイルの直接競合</small></span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「UQの前はどこでしたか？乗り換えてみてどうですか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>auから来たのか、他社から来たのか</li>
+        <li>他社からUQに乗り換えた理由<small>料金・端末・電波・キャッシュバックのどれが決め手だったかを切り分ける</small></li>
+        <li>自宅セット割の対象回線<small>何の光・でんきを使っているか</small></li>
+        <li>家族もUQか</li>
+        <li>通信速度・つながりやすさへの不満</li>
+      </ul>
+      <div class="perk"><small>プランと料金のめやす（税込）</small><ul><li>コミコミプランバリュー：月3,828円<small>35GB＋10分かけ放題・Pontaパス付き。UQコミコミおトク割で最大13か月 月3,168円</small></li><li>トクトクプラン2：月4,048円（30GB）<small>5GB以下の月は2,948円。自宅セット割−1,100円＋au PAYカード払い−220円で月2,728円〜（5GB以下なら1,628円〜）</small></li><li>旧プランのまま使っている人もいる<small>コミコミプラン＋・ミニミニプランなどは2025年6月に受付終了</small></li></ul><small>Pontaパス</small><ul><li>通常月548円のサブスク。コミコミプランバリューなら料金に含まれる</li><li>ローソンで毎週使えるクーポン、au PAY払いでPontaポイントの還元アップ</li></ul><div class="tip">聞きどころ：どのプランか・いつ契約したか（割引が切れる時期＝乗り換えのタイミング）。Pontaパスやローソンを実際に使っているか</div></div>
+      <div class="aim"><small>狙い</small>自宅セットの条件比較と、家族割の比較で勝負。</div>
+    </div>
+  </div>
+
+  <div class="card" style="--c:var(--au)">
+    <div class="head"><span class="bar"></span><span class="name">povo<small>auのオンライン専用</small></span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「povoの前はどこでしたか？メインで使っていますか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>トッピングの買い方と実際の月の支払額<small>安いつもりで高くなっていることも</small></li>
+        <li>最後にトッピングを買った（課金した）のはいつか<small>有効期限が切れる時期＝提案のタイミング</small></li>
+        <li>買っているトッピングは年・月・日のどれか<small>365日・30日・1日など。年単位なら残り期間を確認</small></li>
+        <li>サブ回線かメイン回線か</li>
+        <li>自分で手続きするのが面倒になっていないか</li>
+      </ul>
+      <div class="perk"><small>今の主な特典</small><ul><li>基本料0円。必要な分だけトッピングを買う</li><li>期間限定のデータボーナス（プロモコード）をよく配っている</li></ul><div class="tip">聞きどころ：ボーナス込みで足りているか、トッピング代を含めた実際の支払額を聞く</div></div>
+      <div class="aim"><small>狙い</small>実際の支払額を見える化。メインなら「手間がかからない」で提案。</div>
+    </div>
+  </div>
+  <div class="top"><a href="#top" data-j>↑ 目次へ</a></div>
+
+  <!-- 5 -->
+  <div class="chapter" id="rakuten"><div class="no">5</div><h2>楽天モバイル</h2></div>
+  <div class="lead"><b>客層：</b>楽天経済圏の人か、安さを求めて乗り換えた人。</div>
+  <div class="card" style="--c:var(--rakuten)">
+    <div class="head"><span class="bar"></span><span class="name">楽天モバイル</span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「楽天の前はどこでしたか？楽天市場やカードはよく使いますか？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>楽天市場・楽天カード・楽天ポイントへの依存度</li>
+        <li>つながりにくい場所・時間帯<small>建物内・地下・移動中など</small></li>
+        <li>月によってデータ量が変わるか<small>段階制なので支払額も変わる</small></li>
+        <li>Rakuten Linkで通話しているか</li>
+      </ul>
+      <div class="aim"><small>狙い</small>通信品質の不満を引き出す。ポイント重視の人にはPayPayへの移行メリットで切り返し。</div>
+    </div>
+  </div>
+  <div class="top"><a href="#top" data-j>↑ 目次へ</a></div>
+
+  <!-- 6 -->
+  <div class="chapter" id="mvno"><div class="no">6</div><h2>格安SIM<small>mineo・IIJmio・日本通信 など</small></h2></div>
+  <div class="lead"><b>客層：</b>料金最優先。ネットに詳しいが、困ったときのサポートには不安がある。</div>
+  <div class="card" style="--c:var(--mvno)">
+    <div class="head"><span class="bar"></span><span class="name">格安SIM</span></div>
+    <div class="body">
+      <div class="first"><small>最初の一問</small>「前はどこでしたか？格安SIMを選んだ決め手は？」</div>
+      <div class="label">重点ヒアリング</div>
+      <ul>
+        <li>昼休み・夕方に遅くなると感じるか</li>
+        <li>困ったとき誰に聞いているか<small>サポートが必要か</small></li>
+        <li>端末をどこで買ったか<small>SIMフリー・中古など</small></li>
+        <li>キャリアメールがなくて困っていないか</li>
+        <li>家族のキャリア</li>
+      </ul>
+      <div class="aim"><small>狙い</small>「速度」と「サポート」の不満を引き出し、料金差は意外と小さいと比較で見せる。</div>
+    </div>
+  </div>
+
+  <p class="note">※「今の主な特典」は2026年11月時点で確認できた範囲です。キャンペーンは頻繁に変わります。<br>※ プラン名・割引名・端末プログラム名は改定されることがあります。研修前に最新の社内資料と照らし合わせてください。</p>
+  <div class="top"><a href="#top" data-j>↑ 目次へ</a></div>
+</div>
+
+<script>
+  document.querySelectorAll('a[data-j]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const el=document.getElementById(a.getAttribute('href').slice(1));
+    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+</script>
+</body>
+</html>
